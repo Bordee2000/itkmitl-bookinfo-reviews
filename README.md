@@ -8,10 +8,10 @@ Reviews service has been developed on Gradle
 # How to run with docker
 
 ```bash
-# Build Docker Image for rating service
+# Build Docker Image for reviews service
 docker build -t ratings .
 
-# Run ratings service on port 8082
+# Run reviews service on port 8082
 docker run -d --name reviews -p 8082:9080 --link ratings:ratings -e 'RATINGS_SERVICE=http://ratings:8080' -e 'ENABLE_RATINGS=true' reviews
 ```
 
