@@ -20,7 +20,9 @@ spec:
         image: ghcr.io/bordee2000/bookinfo-reviews:dev
         imagePullPolicy: Always
         env:
-        - name: SERVICE_VERSION
-          value: v1
+        - name: ENABLE_RATINGS
+          value: "true"
+        - name: RATINGS_SERVICE
+          value: "itkmitl.bookinfo.dev.opsta.net/ratings"
       imagePullSecrets:
       - name: registry-bookinfo
